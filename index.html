@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensor Dashboard</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+  <style>
+    body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sensor-card {
+    display: inline-block;
+    width: 23%;
+    padding: 20px;
+    margin: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .sensor-value {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  canvas {
+    max-width: 45%;
+  }
+  
+  .auth-form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .auth-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .auth-form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .auth-form button:hover {
+    background: #0056b3;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  </style>
+</head>
+<body>
+
+<!-- Authentication Forms -->
+<div id="loginForm" class="auth-form">
+  <h2>Login</h2>
+  <input type="text" id="loginUsername" placeholder="Username">
+  <input type="password" id="loginPassword" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <p><a href="#" onclick="showRegisterForm()">Register</a></p>
+</div>
+<div id="registerForm" class="auth-form hidden">
+  <h2>Register</h2>
+  <input type="text" id="registerUsername" placeholder="Username">
+  <input type="password" id="registerPassword" placeholder="Password">
+  <button onclick="register()">Register</button>
+  <p><a href="#" onclick="showLoginForm()">Login</a></p>
+</div>
+
+<!-- Dashboard -->
+<div id="dashboard" class="hidden">
+  <h1>Sensor Dashboard</h1>
+  <div class="sensor-card"><h3>pH</h3><div class="sensor-value" id="ph">0.00</div></div>
+  <div class="sensor-card"><h3>Turbidity</h3><div class="sensor-value" id="turbidity">0.00</div></div>
+  <div class="sensor-card"><h3>Temperature</h3><div class="sensor-value" id="temp">0.00 °C</div></div>
+  <div class="sensor-card"><h3>Water Level</h3><div class="sensor-value" id="level">0.00 cm</div></div>
+  <div class="chart-container">
+    <canvas id="phChart"></canvas>
+    <canvas id="turbidityChart"></canvas>
+    <canvas id="tempChart"></canvas>
+    <canvas id="levelChart"></canvas>
+  </div>
+</div>
+
+<script>let users = JSON.parse(localStorage.getItem('users')) || [];
+
+  function showLoginForm() { toggleForms('loginForm'); }
+  function showRegisterForm() { toggleForms('registerForm'); }
+  function showDashboard() { toggleForms('dashboard'); }
+  
+  function toggleForms(show) {
+    document.querySelectorAll('.auth-form, #dashboard').forEach(el => el.classList.add('hidden'));
+    document.getElementById(show).classList.remove('hidden');
+  }
+  
+  function login() {
+    alert('Login successful!');
+    showDashboard();
+  }
+  
+  function register() {
+    alert('Registration successful!');
+    showLoginForm();
+  }
+  
+  function simulateData() {
+    return {
+      ph: 7 + Math.random() * 0.5,
+      turbidity: 20 + Math.random() * 5,
+      temp: 25 + Math.random() * 2,
+      level: 50 + Math.random() * 10
+    };
+  }
+  
+  let charts = {};
+  window.onload = function() {
+    showLoginForm();
+    ['ph', 'turbidity', 'temp', 'level'].forEach(id => {
+      let ctx = document.getElementById(id + 'Chart').getContext('2d');
+      charts[id] = new Chart(ctx, {
+        type: 'line',
+        data: { labels: [], datasets: [{ label: id.toUpperCase(), borderColor: '#007bff', data: [], fill: false }] }
+      });
+    });
+    setInterval(updateData, 2000);
+  };
+  
+  function updateData() {
+    let data = simulateData();
+    ['ph', 'turbidity', 'temp', 'level'].forEach(id => {
+      document.getElementById(id).innerText = data[id].toFixed(2);
+      let chart = charts[id];
+      chart.data.labels.push(new Date().toLocaleTimeString());
+      chart.data.datasets[0].data.push(data[id]);
+      if (chart.data.labels.length > 10) {
+        chart.data.labels.shift();
+        chart.data.datasets[0].data.shift();
+      }
+      chart.update();
+    });
+  }
+  </script>
+</body>
+</html>

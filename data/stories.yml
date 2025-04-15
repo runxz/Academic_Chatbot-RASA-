@@ -1,0 +1,82 @@
+version: "3.1"
+
+stories:
+- story: Menjawab informasi dari database
+  steps:
+  - intent: informasi_pendaftaran
+  - action: action_get_informasi
+
+- story: Menjawab jadwal pendaftaran
+  steps:
+  - intent: jadwal_pendaftaran
+  - action: action_get_informasi
+
+- story: Menjawab biaya kuliah
+  steps:
+  - intent: biaya_kuliah
+  - action: action_get_informasi
+
+- story: Menjawab persyaratan pendaftaran
+  steps:
+  - intent: persyaratan_pendaftaran
+  - action: action_get_informasi
+
+- story: Menjawab prosedur seleksi
+  steps:
+  - intent: prosedur_seleksi
+  - action: action_get_informasi
+
+- story: Menjawab informasi prodi
+  steps:
+  - intent: informasi_prodi
+  - action: action_get_informasi
+
+- story: Menjawab kurikulum dan mata kuliah
+  steps:
+  - intent: kurikulum_mata_kuliah
+  - action: action_get_informasi
+
+- story: Menjawab fasilitas dan laboratorium
+  steps:
+  - intent: fasilitas_laboratorium
+  - action: action_get_informasi
+
+- story: Menjawab peluang kerja
+  steps:
+  - intent: peluang_kerja
+  - action: action_get_informasi
+
+- story: Menjawab akreditasi dan prestasi
+  steps:
+  - intent: akreditasi_prestasi
+  - action: action_get_informasi
+
+- story: Menjawab kegiatan mahasiswa
+  steps:
+  - intent: kegiatan_mahasiswa
+  - action: action_get_informasi
+
+- story: Menjawab kontak dan lokasi
+  steps:
+  - intent: kontak_lokasi
+  - action: action_get_informasi
+
+- story: Menjawab jadwal kuliah
+  steps:
+  - intent: jadwal_kuliah
+  - action: action_get_informasi
+
+- story: Menjawab beasiswa dan bantuan keuangan
+  steps:
+  - intent: beasiswa_dan_bantuan_keuangan
+  - action: action_get_informasi
+
+- story: Menjawab salam
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Menangani fallback
+  steps:
+  - intent: fallback
+  - action: utter_fallback

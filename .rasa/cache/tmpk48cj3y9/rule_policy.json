@@ -1,0 +1,44 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informasi_pendaftaran\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informasi_pendaftaran\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"informasi_pendaftaran\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informasi_prodi\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"informasi_prodi\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"informasi_prodi\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fasilitas_laboratorium\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fasilitas_laboratorium\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"fasilitas_laboratorium\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"persyaratan_pendaftaran\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"persyaratan_pendaftaran\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"persyaratan_pendaftaran\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fallback\"}}]": "utter_fallback",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fallback\"}}, {\"prev_action\": {\"action_name\": \"utter_fallback\"}, \"user\": {\"intent\": \"fallback\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"akreditasi_prestasi\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"akreditasi_prestasi\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"akreditasi_prestasi\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"prosedur_seleksi\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"prosedur_seleksi\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"prosedur_seleksi\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"beasiswa_dan_bantuan_keuangan\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"beasiswa_dan_bantuan_keuangan\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"beasiswa_dan_bantuan_keuangan\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"peluang_kerja\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"peluang_kerja\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"peluang_kerja\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"biaya_kuliah\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"biaya_kuliah\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"biaya_kuliah\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"jadwal_pendaftaran\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"jadwal_pendaftaran\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"jadwal_pendaftaran\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"kurikulum_mata_kuliah\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"kurikulum_mata_kuliah\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"kurikulum_mata_kuliah\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"kegiatan_mahasiswa\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"kegiatan_mahasiswa\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"kegiatan_mahasiswa\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"kontak_lokasi\"}}]": "action_get_informasi",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"kontak_lokasi\"}}, {\"prev_action\": {\"action_name\": \"action_get_informasi\"}, \"user\": {\"intent\": \"kontak_lokasi\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "predicting default action with intent back",
+      "predicting default action with intent session_start"
+    ]
+  }
+}

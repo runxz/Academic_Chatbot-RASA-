@@ -1,0 +1,59 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "akreditasi_prestasi": 0,
+        "back": 1,
+        "beasiswa_dan_bantuan_keuangan": 2,
+        "biaya_kuliah": 3,
+        "chit_chat": 4,
+        "fallback": 5,
+        "fasilitas_laboratorium": 6,
+        "greet": 7,
+        "informasi_general": 8,
+        "informasi_pendaftaran": 9,
+        "informasi_prodi": 10,
+        "jadwal_pendaftaran": 11,
+        "kegiatan_mahasiswa": 12,
+        "kontak_lokasi": 13,
+        "kurikulum_mata_kuliah": 14,
+        "nlu_fallback": 15,
+        "out_of_scope": 16,
+        "peluang_kerja": 17,
+        "persyaratan_pendaftaran": 18,
+        "prosedur_seleksi": 19,
+        "restart": 20,
+        "session_start": 21
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_get_informasi": 13,
+        "action_search_internet": 14,
+        "utter_chit_chat": 15,
+        "utter_fallback": 16,
+        "utter_greet": 17,
+        "utter_informasi_general": 18
+      },
+      "entities": {},
+      "slots": {},
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

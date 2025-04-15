@@ -1,0 +1,51 @@
+version: "3.1"
+
+
+intents:
+  - informasi_pendaftaran
+  - jadwal_pendaftaran
+  - biaya_kuliah
+  - persyaratan_pendaftaran
+  - prosedur_seleksi
+  - informasi_prodi
+  - kurikulum_mata_kuliah
+  - fasilitas_laboratorium
+  - peluang_kerja
+  - akreditasi_prestasi
+  - kegiatan_mahasiswa
+  - kontak_lokasi
+  - beasiswa_dan_bantuan_keuangan
+  - jadwal_kuliah
+  - greet
+  - fallback
+  - chit_chat
+  - goodbye
+  - thankyou
+  - informasi_general  
+
+actions:
+  - action_get_informasi
+  - action_search_internet
+
+responses:
+  utter_greet:
+    - text: "Hai! Senang bertemu dengan Anda. Apa yang bisa saya bantu hari ini?"
+
+  utter_goodbye:
+    - text: "Sampai jumpa! Semoga harimu menyenangkan!"
+  
+  utter_thankyou:
+    - text: "Sama-sama! Senang bisa membantu."
+
+  utter_fallback:
+    - text: "Maaf, saya belum memahami pertanyaan Anda. Bisa dijelaskan dengan cara lain? Saya siap membantu!"
+  
+  utter_chit_chat:
+    - text: "Oh, itu menarik! Bisa Anda ceritakan lebih lanjut?"
+    - text: "Saya di sini untuk membantu! Ada yang bisa saya jawab?"
+    - text: "Haha, itu pertanyaan yang menarik! Saya senang berbincang dengan Anda."
+    - text: "Saya hanya sebuah bot, tapi saya di sini untuk membantu Anda. :)"
+  
+  utter_informasi_general:
+    - text: "Saya akan mencari informasi untuk Anda, mohon tunggu sebentar..."
+

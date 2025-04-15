@@ -1,0 +1,796 @@
+nlu:
+- intent: informasi_pendaftaran
+  examples: |
+    - Bagaimana cara mendaftar di Universitas?
+    - Apa saja informasi pendaftaran yang harus saya ketahui?
+    - Bagaimana prosedur pendaftaran untuk mahasiswa baru?
+    - Apakah pendaftaran bisa dilakukan secara online?
+    - Apakah ada jalur pendaftaran khusus untuk karyawan atau profesional?
+    - Saya ingin mendaftar, apa langkah pertama yang harus saya lakukan?
+    - Dimana saya bisa mendapatkan formulir pendaftaran?
+    - Apa saja dokumen yang dibutuhkan untuk mendaftar?
+    - Apakah ada batas waktu pendaftaran?
+    - Kapan jadwal pendaftaran dibuka?
+    - Bagaimana cara mengetahui apakah saya diterima?
+    - Apakah ada biaya pendaftaran?
+    - Apakah saya bisa mendaftar jika belum lulus sekolah?
+    - Saya sudah lulus tahun lalu, apakah masih bisa mendaftar?
+    - Bagaimana cara membuat akun untuk pendaftaran online?
+    - Apakah ada syarat khusus untuk mahasiswa internasional?
+    - Apakah ada batasan umur untuk mendaftar?
+    - Apakah ada perbedaan pendaftaran untuk jalur reguler dan jalur mandiri?
+    - Berapa lama proses seleksi setelah mendaftar?
+    - Apa yang harus saya lakukan setelah mendaftar?
+    - Bagaimana cara mengubah data setelah saya mendaftar?
+    - Apakah saya bisa membatalkan pendaftaran?
+    - Apakah saya bisa mendaftar di lebih dari satu program studi?
+    - Apakah ada kuota penerimaan mahasiswa baru?
+    - Apakah ada seleksi tambahan setelah pendaftaran?
+    - Dimana saya bisa melihat informasi terbaru tentang pendaftaran?
+    - Apakah ada hotline atau kontak untuk bertanya tentang pendaftaran?
+    - Bagaimana jika saya mengalami masalah saat mendaftar online?
+    - Apakah ada sesi konsultasi bagi calon mahasiswa sebelum mendaftar?
+    - Bagaimana sistem verifikasi berkas setelah pendaftaran?
+    - Apakah saya bisa mengganti program studi setelah mendaftar?
+    - Apakah saya harus datang langsung ke kampus untuk mendaftar?
+    - Apakah ada ujian masuk setelah pendaftaran?
+    - Apakah ada jalur beasiswa yang bisa saya daftar bersamaan?
+    - Bagaimana jika saya tidak lulus seleksi, apakah ada opsi lain?
+    - Apakah ada program khusus untuk mahasiswa berprestasi?
+    - Bagaimana cara mengetahui status pendaftaran saya?
+    - Jika saya dari luar kota, bagaimana saya bisa mengurus pendaftaran?
+    - Apakah ada demo atau panduan video tentang cara mendaftar?
+    - Apakah saya bisa mendapatkan surat keterangan bahwa saya telah mendaftar?
+    - Bagaimana jika saya salah mengisi formulir pendaftaran?
+    - Bagaimana cara mengunggah dokumen untuk pendaftaran online?
+    - Apakah ada grup atau komunitas calon mahasiswa yang bisa saya ikuti?
+    - Jika saya pindahan dari universitas lain, bagaimana proses pendaftarannya?
+    - Apakah saya bisa mengajukan pertanyaan langsung kepada bagian pendaftaran?
+    - Bagaimana prosedur pendaftaran untuk mahasiswa transfer?
+    - Apakah ada batasan nilai akademik untuk bisa mendaftar?
+    - Bagaimana cara mencetak kartu pendaftaran saya?
+    - Apakah ada jalur rekomendasi dari sekolah untuk pendaftaran?
+
+- intent: jadwal_pendaftaran
+  examples: |
+    - Kapan pendaftaran dibuka?
+    - Apa deadline pendaftaran tahun ini?
+    - Kapan jadwal seleksi tahap 1 dan tahap 2?
+    - Apakah ada perpanjangan waktu pendaftaran?
+    - Kapan hasil seleksi diumumkan?
+    - Apakah ada batas waktu pengumpulan dokumen?
+    - Dimana saya bisa melihat jadwal lengkap pendaftaran?
+    - Kapan pengumuman hasil tes masuk universitas?
+    - Apakah ada jadwal khusus untuk mahasiswa internasional?
+    - Sampai kapan saya bisa mengajukan pendaftaran?
+    - Apakah ada tahapan seleksi setelah pendaftaran?
+    - Bagaimana cara mengetahui apakah jadwal pendaftaran berubah?
+    - Apakah jadwal pendaftaran berbeda untuk setiap fakultas?
+    - Apakah ada sesi pendaftaran gelombang kedua?
+    - Berapa lama waktu yang dibutuhkan untuk proses seleksi?
+    - Kapan waktu terakhir untuk membayar biaya pendaftaran?
+    - Apakah ada jadwal tes tambahan untuk jalur mandiri?
+    - Apakah ada batasan kuota pendaftaran di setiap tahap?
+    - Jika saya telat daftar, apakah masih bisa ikut seleksi?
+    - Kapan ujian masuk universitas diadakan?
+    - Apakah ada jadwal wawancara setelah seleksi berkas?
+    - Kapan pengumuman hasil seleksi jalur prestasi?
+    - Apakah ada perbedaan jadwal antara jalur reguler dan beasiswa?
+    - Bagaimana cara mengetahui update terbaru tentang jadwal pendaftaran?
+    - Dimana saya bisa mendapatkan kalender akademik terbaru?
+    - Kapan saya harus menyerahkan berkas pendaftaran?
+    - Apakah ada batas waktu untuk mengonfirmasi penerimaan?
+    - Berapa hari setelah seleksi saya bisa melihat hasilnya?
+    - Apakah jadwal pendaftaran sama setiap tahunnya?
+    - Kapan jadwal orientasi mahasiswa baru diumumkan?
+    - Kapan jadwal tes tertulis diumumkan?
+    - Apakah ada pembagian jadwal berdasarkan program studi?
+    - Bagaimana jika saya tidak bisa mengikuti tes di jadwal yang ditentukan?
+    - Kapan batas akhir untuk melengkapi persyaratan pendaftaran?
+    - Apakah ada informasi resmi tentang perubahan jadwal?
+    - Kapan saya bisa mulai mengakses sistem pendaftaran online?
+    - Apakah ada jadwal pendaftaran ulang bagi yang lolos seleksi?
+    - Bagaimana jika saya ingin pindah ke jadwal seleksi lain?
+    - Apakah ada informasi tentang jadwal pendaftaran untuk program pascasarjana?
+    - Apakah jadwal pendaftaran berbeda untuk jalur SNMPTN dan SBMPTN?
+    - Kapan saya bisa mencetak kartu ujian setelah mendaftar?
+    - Jika saya gagal seleksi, kapan saya bisa mendaftar ulang?
+    - Kapan batas akhir pembayaran UKT bagi mahasiswa baru?
+    - Kapan jadwal bimbingan akademik untuk mahasiswa baru?
+    - Apakah saya bisa mengubah jadwal tes yang sudah ditentukan?
+    - Dimana saya bisa mengecek perubahan jadwal pendaftaran?
+    - Jika saya ingin mengikuti jalur masuk lain, kapan pendaftarannya?
+    - Apakah saya bisa mendaftar lebih awal sebelum jadwal resmi dibuka?
+    - Berapa lama proses verifikasi setelah saya mengunggah dokumen?
+    - Apakah ada sesi konsultasi terkait jadwal pendaftaran?
+
+- intent: biaya_kuliah
+  examples: |
+    - Berapa biaya kuliah di prodi ini?
+    - Bagaimana sistem pembayaran biaya kuliah?
+    - Apakah ada program cicilan atau beasiswa?
+    - Berapa biaya pendaftaran mahasiswa baru?
+    - Apa saja komponen biaya kuliah yang harus dibayar?
+    - Apakah biaya per semester bisa berubah setiap tahun?
+    - Apakah ada potongan biaya untuk mahasiswa berprestasi?
+    - Berapa total biaya kuliah sampai lulus?
+    - Apakah ada perbedaan biaya antara jalur reguler dan jalur mandiri?
+    - Apakah biaya kuliah berbeda untuk setiap program studi?
+    - Bagaimana cara mengetahui rincian biaya kuliah?
+    - Apakah ada diskon untuk mahasiswa dari keluarga kurang mampu?
+    - Apakah biaya kuliah mencakup biaya buku dan bahan ajar?
+    - Berapa biaya laboratorium yang harus dibayarkan?
+    - Apakah ada biaya tambahan selain SPP dan UKT?
+    - Bagaimana cara membayar biaya kuliah secara online?
+    - Apakah biaya kuliah bisa dikembalikan jika saya mengundurkan diri?
+    - Kapan batas akhir pembayaran biaya kuliah?
+    - Apakah ada denda jika terlambat membayar biaya kuliah?
+    - Apakah mahasiswa transfer memiliki biaya kuliah yang berbeda?
+    - Bagaimana cara mengajukan keringanan biaya kuliah?
+    - Berapa biaya daftar ulang setiap semester?
+    - Apakah ada perbedaan biaya untuk mahasiswa internasional?
+    - Apakah ada program pembebasan biaya kuliah?
+    - Bagaimana cara mendapatkan informasi resmi tentang biaya kuliah?
+    - Apakah ada simulasi perhitungan biaya kuliah?
+    - Bagaimana cara membayar biaya kuliah dengan cicilan?
+    - Berapa biaya pendaftaran ulang setelah diterima?
+    - Apakah mahasiswa harus membayar biaya asrama?
+    - Apakah biaya kuliah sudah termasuk biaya ujian?
+    - Apakah ada biaya tambahan untuk kegiatan ekstrakurikuler?
+    - Berapa biaya yang harus dibayar jika mengambil semester pendek?
+    - Apakah ada biaya tambahan untuk tugas akhir atau skripsi?
+    - Apakah ada perbedaan biaya antara kelas pagi dan kelas malam?
+    - Apakah biaya kuliah bisa dibayar melalui bank atau e-wallet?
+    - Bagaimana jika saya tidak bisa membayar biaya kuliah tepat waktu?
+    - Apakah biaya kuliah bisa berubah jika saya cuti kuliah?
+    - Bagaimana cara mengetahui biaya kuliah untuk jalur prestasi?
+    - Apakah biaya kuliah bisa ditransfer ke mahasiswa lain?
+    - Apakah ada kebijakan pengembalian uang jika saya pindah ke universitas lain?
+    - Apakah biaya kuliah sudah mencakup biaya wisuda?
+    - Apakah ada program subsidi biaya kuliah dari pemerintah?
+    - Bagaimana cara mengetahui rincian pembayaran yang sudah saya lakukan?
+    - Apakah ada biaya tambahan untuk mahasiswa kelas karyawan?
+    - Jika saya gagal dalam suatu mata kuliah, apakah ada biaya tambahan?
+    - Apakah ada potongan biaya untuk anak pegawai universitas?
+    - Apakah ada skema bantuan finansial selain beasiswa?
+    - Bagaimana cara mendapatkan rincian tagihan biaya kuliah?
+    - Apakah ada sanksi jika saya tidak membayar biaya kuliah tepat waktu?
+
+- intent: persyaratan_pendaftaran
+  examples: |
+    - Apa saja syarat pendaftaran?
+    - Dokumen apa yang harus disiapkan untuk mendaftar?
+    - Apakah saya perlu legalisir ijazah untuk mendaftar?
+    - Apakah ada batasan usia untuk mendaftar?
+    - Apakah sertifikat TOEFL/IELTS diperlukan?
+    - Apakah ada perbedaan syarat untuk pendaftaran reguler dan beasiswa?
+    - Berapa nilai minimal yang diperlukan untuk diterima?
+    - Apakah saya harus menyertakan rapor saat mendaftar?
+    - Apakah ada tes kesehatan sebagai syarat pendaftaran?
+    - Apakah ada wawancara dalam proses pendaftaran?
+    - Apakah saya harus memiliki surat rekomendasi dari sekolah?
+    - Apakah syarat pendaftaran berbeda untuk mahasiswa internasional?
+    - Apakah perlu melampirkan surat keterangan berkelakuan baik?
+    - Bagaimana jika saya belum memiliki KTP, apakah bisa mendaftar?
+    - Apakah saya harus memiliki NPWP untuk mendaftar?
+    - Apakah ada ketentuan khusus untuk jalur prestasi?
+    - Apakah ada syarat khusus bagi lulusan paket C?
+    - Apakah saya perlu menyertakan foto saat mendaftar?
+    - Apakah ada syarat khusus bagi mahasiswa pindahan?
+    - Apakah ada syarat pengalaman kerja untuk pendaftaran?
+    - Apakah ada format khusus untuk surat rekomendasi?
+    - Apakah ada syarat khusus bagi penyandang disabilitas?
+    - Apakah ada minimal nilai mata pelajaran tertentu?
+    - Apakah saya perlu membuat akun untuk mendaftar?
+    - Apakah ada kuota khusus bagi pendaftar dari daerah tertentu?
+    - Apakah lulusan tahun lalu masih bisa mendaftar?
+    - Apakah saya harus memiliki SKHUN untuk mendaftar?
+    - Apakah saya perlu melakukan tes bakat minat?
+    - Apakah ada syarat tinggi badan untuk masuk ke program tertentu?
+    - Apakah ada tes tambahan selain ujian tertulis?
+    - Apakah pendaftar harus mengikuti program matrikulasi?
+    - Apakah ada syarat pengalaman organisasi untuk mendaftar?
+    - Bagaimana jika saya tidak memenuhi nilai minimal yang ditentukan?
+    - Apakah saya harus menyerahkan essay sebagai syarat pendaftaran?
+    - Apakah saya perlu menyertakan rekening listrik atau bukti domisili?
+    - Apakah ada tes fisik untuk program tertentu?
+    - Apakah saya harus memiliki akun media sosial untuk mendaftar?
+    - Apakah ada batas waktu untuk melengkapi dokumen persyaratan?
+    - Apakah ada surat pernyataan yang harus ditandatangani?
+    - Apakah saya harus mengunggah video perkenalan diri?
+    - Apakah ada syarat khusus bagi mahasiswa yang bekerja?
+    - Bagaimana jika saya kehilangan ijazah, apakah masih bisa mendaftar?
+    - Apakah sertifikat keahlian bisa menjadi syarat pendaftaran?
+    - Apakah ada batasan umur untuk program tertentu?
+    - Apakah saya bisa mendaftar jika belum memiliki ijazah?
+    - Apakah ada syarat minimal IPK bagi mahasiswa transfer?
+    - Apakah saya perlu mengurus SKCK untuk pendaftaran?
+    - Apakah pendaftar harus memiliki asuransi kesehatan?
+    - Apakah ada ketentuan khusus bagi anak tenaga pendidik?
+    - Apakah pendaftar harus memiliki SIM atau surat izin lainnya?
+
+- intent: prosedur_seleksi
+  examples: |
+    - Bagaimana proses seleksi masuk?
+    - Tes apa saja yang harus diikuti untuk masuk?
+    - Apakah ada ujian wawancara dalam seleksi?
+    - Bagaimana jika saya tidak lulus tahap pertama?
+    - Apakah seleksi berbeda untuk jalur reguler dan jalur mandiri?
+    - Apakah ada nilai minimal untuk lolos seleksi?
+    - Dimana saya bisa mendapatkan contoh soal ujian masuk?
+    - Apakah tes seleksi dilakukan secara online atau offline?
+    - Apakah ada ujian keterampilan khusus untuk jurusan tertentu?
+    - Bagaimana jika saya berhalangan hadir pada jadwal seleksi?
+    - Berapa lama proses seleksi dari awal hingga pengumuman?
+    - Apakah ada tes tambahan bagi calon mahasiswa jalur prestasi?
+    - Bagaimana cara mengetahui lokasi ujian seleksi?
+    - Apakah hasil seleksi bisa dibandingkan dengan peserta lain?
+    - Apakah ada kesempatan untuk mengulang tes seleksi?
+    - Berapa kali seleksi dilakukan dalam satu tahun?
+    - Apakah saya bisa memilih jadwal seleksi sendiri?
+    - Apakah ada bimbingan belajar khusus sebelum seleksi?
+    - Apa saja dokumen yang harus dibawa saat seleksi?
+    - Apakah ada simulasi ujian sebelum seleksi utama?
+    - Bagaimana format soal yang diujikan dalam seleksi?
+    - Apakah ada bobot nilai berbeda untuk tiap tahap seleksi?
+    - Berapa jumlah peserta yang diterima dalam setiap seleksi?
+    - Apakah ada sistem ranking dalam seleksi masuk?
+    - Jika saya gagal seleksi, apakah ada jalur lain yang bisa saya coba?
+    - Apakah ada ujian praktik bagi jurusan tertentu?
+    - Apakah seleksi masuk mempertimbangkan pengalaman kerja?
+    - Apakah ada jalur seleksi khusus untuk pendaftar dari daerah tertentu?
+    - Apakah ada kebijakan khusus bagi penyandang disabilitas dalam seleksi?
+    - Bagaimana sistem penilaian dalam ujian seleksi?
+    - Apakah ada pembobotan nilai antara tes tulis dan wawancara?
+    - Bagaimana cara mengetahui hasil seleksi secara online?
+    - Jika saya diterima, apa langkah selanjutnya setelah seleksi?
+    - Apakah ada jalur seleksi untuk mahasiswa transfer?
+    - Apakah tes seleksi sama setiap tahunnya?
+    - Apakah ada seleksi tambahan setelah lolos tahap pertama?
+    - Berapa lama waktu yang diberikan untuk setiap tes?
+    - Apakah hasil seleksi bisa diklaim atau dibandingkan?
+    - Apakah ada sesi tanya jawab setelah seleksi?
+    - Bagaimana format tes psikotes dalam seleksi?
+    - Apakah ada penilaian dari nilai rapor dalam seleksi?
+    - Apakah ada tes kepribadian dalam seleksi?
+    - Jika saya sudah lulus SNMPTN, apakah masih perlu ikut seleksi ini?
+    - Apakah ada aturan berpakaian saat mengikuti seleksi?
+    - Bagaimana jika saya sakit pada hari ujian seleksi?
+    - Apakah ada perbedaan seleksi untuk program S1 dan pascasarjana?
+    - Apakah ada jalur undangan tanpa tes seleksi?
+    - Bagaimana jika saya tidak mendapatkan informasi jadwal seleksi?
+    - Jika saya memiliki prestasi akademik, apakah ada seleksi khusus?
+
+- intent: informasi_prodi
+  examples: |
+    - Apa itu prodi komputer jaringan?
+    - Apa visi dan misi prodi ini?
+    - Apa keunggulan prodi ini dibandingkan dengan prodi serupa?
+    - Apa saja kompetensi yang akan saya pelajari?
+    - Apakah ada program internasional untuk prodi ini?
+    - Apakah ada spesialisasi tertentu dalam prodi ini?
+    - Bagaimana sistem pembelajaran di prodi ini?
+    - Apa saja mata kuliah yang diajarkan dalam prodi ini?
+    - Bagaimana prospek kerja lulusan prodi ini?
+    - Apakah ada program sertifikasi yang bisa diambil selama kuliah?
+    - Apakah prodi ini lebih fokus ke teori atau praktik?
+    - Berapa jumlah SKS yang harus diselesaikan untuk lulus?
+    - Apakah ada kerja sama dengan industri dalam prodi ini?
+    - Apa perbedaan antara prodi ini dengan teknik informatika?
+    - Bagaimana sistem evaluasi dan ujian di prodi ini?
+    - Apakah ada kesempatan untuk mengikuti program magang?
+    - Apakah prodi ini memiliki laboratorium sendiri?
+    - Bagaimana cara mahasiswa mengakses sumber belajar tambahan?
+    - Apakah ada kesempatan untuk melakukan penelitian selama kuliah?
+    - Apakah lulusan prodi ini bisa melanjutkan ke jenjang S2?
+    - Apakah ada kelas malam atau kelas karyawan untuk prodi ini?
+    - Apakah ada program pertukaran pelajar untuk mahasiswa prodi ini?
+    - Apakah ada komunitas atau organisasi mahasiswa di prodi ini?
+    - Apa saja prestasi yang pernah diraih oleh mahasiswa prodi ini?
+    - Apakah ada mata kuliah pilihan dalam kurikulum prodi ini?
+    - Bagaimana fasilitas pendukung untuk mahasiswa prodi ini?
+    - Apa saja tantangan utama dalam mempelajari prodi ini?
+    - Apakah ada program dual degree untuk prodi ini?
+    - Bagaimana peran alumni dalam pengembangan prodi ini?
+    - Bagaimana hubungan prodi ini dengan dunia industri?
+    - Apakah ada proyek akhir atau skripsi sebagai syarat kelulusan?
+    - Apakah prodi ini memiliki dosen tamu dari industri?
+    - Bagaimana cara mengakses jurnal dan publikasi ilmiah terkait prodi ini?
+    - Apakah ada program beasiswa khusus untuk mahasiswa prodi ini?
+    - Bagaimana sistem pembimbingan akademik di prodi ini?
+    - Apakah ada kesempatan untuk bekerja di kampus selama kuliah?
+    - Bagaimana cara mahasiswa berkontribusi dalam penelitian dosen?
+    - Apakah ada seminar atau workshop rutin yang diadakan oleh prodi?
+    - Bagaimana hubungan antara prodi ini dengan asosiasi profesi?
+    - Apakah ada mata kuliah kewirausahaan dalam prodi ini?
+    - Bagaimana cara mahasiswa mendapatkan bimbingan karir?
+    - Apakah ada program percepatan studi dalam prodi ini?
+    - Apa saja software atau teknologi yang digunakan dalam pembelajaran?
+    - Bagaimana sistem penjurusan dalam prodi ini?
+    - Bagaimana sistem penulisan tugas akhir di prodi ini?
+    - Apakah ada kesempatan untuk menjadi asisten dosen di prodi ini?
+    - Apa saja perusahaan yang sering merekrut lulusan prodi ini?
+    - Bagaimana sistem pembelajaran berbasis proyek di prodi ini?
+    - Apakah ada mata kuliah terkait kecerdasan buatan dalam prodi ini?
+
+- intent: kurikulum_mata_kuliah
+  examples: |
+    - Apa saja mata kuliah yang diajarkan?
+    - Bagaimana struktur kurikulum prodi ini?
+    - Apakah ada mata kuliah pilihan yang bisa diambil?
+    - Apakah kurikulum selalu diperbarui mengikuti perkembangan industri?
+    - Bisakah saya melihat silabus mata kuliah tertentu?
+    - Apakah ada proyek atau tugas akhir dalam kurikulum?
+    - Mata kuliah apa yang paling sulit dalam prodi ini?
+    - Berapa jumlah SKS yang harus diselesaikan untuk lulus?
+    - Apakah ada mata kuliah yang berkaitan dengan kecerdasan buatan?
+    - Bagaimana sistem pemilihan mata kuliah di tiap semester?
+    - Apakah ada kurikulum khusus bagi mahasiswa jalur beasiswa?
+    - Apakah ada kuliah tamu dari industri dalam kurikulum ini?
+    - Bagaimana sistem pembelajaran untuk mata kuliah berbasis praktik?
+    - Mata kuliah apa yang menjadi fondasi utama dalam prodi ini?
+    - Apakah ada program sertifikasi yang terkait dengan mata kuliah?
+    - Bagaimana sistem evaluasi dalam setiap mata kuliah?
+    - Apakah ada program magang sebagai bagian dari kurikulum?
+    - Apakah ada mata kuliah yang mengajarkan kewirausahaan?
+    - Bagaimana sistem perkuliahan untuk mahasiswa kelas karyawan?
+    - Apakah ada mata kuliah yang fokus pada pengembangan soft skills?
+    - Apakah ada program fast track untuk menyelesaikan kuliah lebih cepat?
+    - Apakah ada mata kuliah yang mengajarkan teknologi terbaru?
+    - Mata kuliah apa yang direkomendasikan untuk peminatan tertentu?
+    - Apakah ada tugas proyek berbasis tim dalam mata kuliah tertentu?
+    - Apakah kurikulum sudah memenuhi standar akreditasi nasional?
+    - Apakah ada workshop atau seminar yang mendukung kurikulum?
+    - Bagaimana sistem pengambilan mata kuliah lintas jurusan?
+    - Apakah ada mata kuliah yang diajarkan dalam bahasa Inggris?
+    - Mata kuliah apa yang membantu dalam persiapan kerja setelah lulus?
+    - Apakah ada sistem e-learning dalam perkuliahan?
+    - Bagaimana sistem ujian dalam kurikulum ini?
+    - Mata kuliah apa yang memiliki praktik laboratorium?
+    - Apakah ada sistem transfer kredit jika saya pindah dari universitas lain?
+    - Bagaimana cara mengetahui mata kuliah yang wajib dan yang pilihan?
+    - Apakah ada mata kuliah yang membahas keamanan siber?
+    - Mata kuliah apa yang harus saya ambil jika ingin bekerja di bidang AI?
+    - Apakah ada program double degree dalam kurikulum ini?
+    - Bagaimana jika saya ingin mengambil lebih banyak mata kuliah dari yang ditentukan?
+    - Apakah ada program kerja sama dengan perusahaan dalam kurikulum ini?
+    - Bagaimana sistem penilaian dalam setiap mata kuliah?
+    - Apakah ada program studi independen dalam kurikulum ini?
+    - Apakah ada mata kuliah tentang teknologi blockchain?
+    - Apakah ada mata kuliah yang fokus pada pengembangan aplikasi?
+    - Bagaimana proses skripsi atau tugas akhir dalam kurikulum ini?
+    - Apakah ada pelatihan tambahan yang direkomendasikan selain mata kuliah?
+    - Apakah ada kuliah daring untuk beberapa mata kuliah?
+    - Apakah ada mata kuliah yang bisa dikonversi menjadi sertifikat profesional?
+    - Bagaimana sistem konsultasi akademik untuk pemilihan mata kuliah?
+    - Apakah ada mata kuliah yang melibatkan studi kasus dari industri?
+    - Apakah ada program pembelajaran berbasis proyek dalam kurikulum ini?
+
+- intent: fasilitas_laboratorium
+  examples: |
+    - Fasilitas apa saja yang tersedia di prodi ini?
+    - Bagaimana kondisi laboratorium komputer jaringan?
+    - Apakah mahasiswa bisa mengakses lab di luar jam kuliah?
+    - Apakah ada fasilitas pendukung untuk penelitian mahasiswa?
+    - Bagaimana sistem peminjaman alat di laboratorium?
+    - Apakah ada ruang khusus untuk praktik jaringan?
+    - Apakah mahasiswa mendapatkan akses ke software khusus?
+    - Apakah ada fasilitas internet gratis di kampus?
+    - Apakah ada laboratorium dengan spesialisasi tertentu?
+    - Berapa jumlah laboratorium yang tersedia di prodi ini?
+    - Apakah laboratorium sudah dilengkapi dengan perangkat terbaru?
+    - Apakah ada ruang belajar yang bisa digunakan oleh mahasiswa?
+    - Bagaimana cara menggunakan fasilitas lab jika saya tidak ada jadwal kuliah?
+    - Apakah laboratorium hanya bisa digunakan untuk mata kuliah tertentu?
+    - Bagaimana kebijakan penggunaan lab bagi mahasiswa tingkat akhir?
+    - Apakah ada akses ke perangkat keras seperti router dan switch untuk praktik?
+    - Apakah mahasiswa bisa meminjam peralatan lab untuk tugas pribadi?
+    - Apakah ada fasilitas VR atau simulasi untuk pembelajaran?
+    - Bagaimana sistem keamanan dalam laboratorium?
+    - Apakah mahasiswa mendapatkan akun untuk mengakses perangkat lunak tertentu?
+    - Apakah ada ruang diskusi yang bisa digunakan mahasiswa?
+    - Apakah laboratorium bisa digunakan untuk penelitian mandiri?
+    - Bagaimana cara mahasiswa baru mendapatkan akses ke laboratorium?
+    - Apakah ada laboratorium yang mendukung pengembangan kecerdasan buatan?
+    - Apakah ada server kampus yang bisa digunakan mahasiswa untuk proyek?
+    - Apakah tersedia laboratorium khusus untuk pemrograman?
+    - Bagaimana sistem reservasi ruangan laboratorium?
+    - Apakah ada lab yang bisa diakses 24 jam?
+    - Apakah ada fasilitas cloud computing yang bisa digunakan mahasiswa?
+    - Apakah tersedia workstation dengan spesifikasi tinggi untuk rendering atau analisis data?
+    - Apakah laboratorium dilengkapi dengan pendingin ruangan?
+    - Apakah ada fasilitas printer 3D di kampus?
+    - Bagaimana kebijakan penggunaan fasilitas lab oleh mahasiswa luar prodi?
+    - Apakah tersedia laboratorium jaringan yang bisa digunakan untuk sertifikasi?
+    - Apakah mahasiswa dapat akses ke pusat data kampus?
+    - Apakah ada teknisi yang bertugas di laboratorium?
+    - Apakah ada perangkat yang bisa digunakan untuk uji penetrasi keamanan jaringan?
+    - Apakah mahasiswa bisa menggunakan lab untuk mengerjakan proyek startup?
+    - Bagaimana cara mendapatkan izin akses ke laboratorium setelah jam operasional?
+    - Apakah ada program pelatihan laboratorium bagi mahasiswa baru?
+    - Apakah tersedia laboratorium robotika dalam program studi ini?
+    - Bagaimana prosedur perawatan dan pemeliharaan alat lab?
+    - Apakah mahasiswa bisa menyimpan proyek mereka di server kampus?
+    - Apakah tersedia akses ke database akademik melalui laboratorium?
+    - Apakah ada laboratorium khusus untuk penelitian cloud computing?
+    - Apakah tersedia ruang eksperimen untuk IoT dan embedded system?
+    - Bagaimana sistem penggantian alat jika terjadi kerusakan?
+    - Apakah ada lab yang dilengkapi dengan jaringan 5G untuk riset?
+    - Apakah mahasiswa memiliki akses ke platform e-learning dari lab?
+
+- intent: peluang_kerja
+  examples: |
+    - Apa peluang kerja setelah lulus?
+    - Di industri apa lulusan prodi komputer jaringan bisa bekerja?
+    - Apakah ada program magang bagi mahasiswa?
+    - Apa saja sertifikasi yang bisa membantu dalam karir?
+    - Apakah universitas membantu dalam penyaluran kerja?
+    - Apa jenis pekerjaan yang bisa didapatkan setelah lulus?
+    - Apakah ada alumni yang bekerja di perusahaan besar?
+    - Apakah lulusan prodi ini bisa bekerja di luar negeri?
+    - Bagaimana prospek kerja lulusan dalam 5 tahun ke depan?
+    - Apakah ada peluang kerja di bidang keamanan siber?
+    - Apakah lulusan bisa bekerja sebagai administrator jaringan?
+    - Apakah ada lowongan kerja khusus untuk lulusan universitas ini?
+    - Apakah ada program kerja sama dengan perusahaan teknologi?
+    - Apakah ada inkubasi startup bagi mahasiswa?
+    - Apakah lulusan bisa bekerja sebagai software engineer?
+    - Apakah ada bidang pekerjaan yang paling diminati oleh lulusan?
+    - Bagaimana cara meningkatkan peluang kerja setelah lulus?
+    - Apakah ada program sertifikasi yang direkomendasikan sebelum lulus?
+    - Apakah lulusan bisa bekerja sebagai konsultan IT?
+    - Bagaimana cara mendapatkan pengalaman kerja selama kuliah?
+    - Apakah ada job fair yang diadakan kampus?
+    - Apakah ada program alumni yang membantu mahasiswa baru dalam mencari kerja?
+    - Apakah ada kursus tambahan yang disarankan untuk meningkatkan prospek kerja?
+    - Apakah ada dukungan universitas dalam persiapan wawancara kerja?
+    - Apakah lulusan bisa menjadi pengusaha di bidang teknologi?
+    - Apakah ada data statistik tentang tingkat penyerapan lulusan di dunia kerja?
+    - Apakah ada program mentoring karir bagi mahasiswa?
+    - Apakah ada perusahaan yang rutin merekrut lulusan dari prodi ini?
+    - Apakah ada kesempatan untuk bekerja di pemerintahan?
+    - Apakah ada program pelatihan industri sebelum mahasiswa lulus?
+    - Bagaimana cara mahasiswa mendapatkan koneksi profesional sebelum lulus?
+    - Apakah ada jalur fast track untuk langsung bekerja setelah lulus?
+    - Apakah lulusan bisa bekerja di bidang kecerdasan buatan?
+    - Apakah ada program beasiswa yang mengarah langsung ke peluang kerja?
+    - Apakah ada perusahaan yang memberikan sponsorship kepada mahasiswa berbakat?
+    - Apakah universitas memiliki kerja sama dengan perusahaan global?
+    - Apakah ada program kerja sambil kuliah?
+    - Apakah ada mata kuliah yang membantu mahasiswa dalam persiapan kerja?
+    - Apakah ada layanan konsultasi karir di universitas?
+    - Bagaimana cara membuat CV yang menarik bagi lulusan baru?
+    - Apakah ada alumni yang sukses membangun startup sendiri?
+    - Apakah ada peluang kerja di industri telekomunikasi?
+    - Apakah ada program internship dengan perusahaan teknologi ternama?
+    - Apakah ada kesempatan kerja di bidang cloud computing?
+    - Apakah ada program pelatihan wawancara kerja untuk mahasiswa?
+    - Apakah ada peluang kerja sebagai data analyst untuk lulusan prodi ini?
+    - Apakah ada peluang kerja bagi lulusan yang ingin menjadi peneliti?
+    - Apakah ada kesempatan kerja di perusahaan berbasis fintech?
+    - Bagaimana cara mempersiapkan diri untuk bersaing di dunia kerja?
+    - Apakah ada jaringan alumni yang bisa membantu dalam pencarian kerja?
+
+- intent: akreditasi_prestasi
+  examples: |
+    - Bagaimana akreditasi prodi ini?
+    - Apa saja prestasi yang pernah diraih oleh prodi ini?
+    - Apakah prodi ini memiliki akreditasi internasional?
+    - Bagaimana perbandingan akreditasi dengan universitas lain?
+    - Apakah ada mahasiswa yang pernah menjuarai kompetisi nasional/internasional?
+    - Apakah ada sertifikasi khusus yang diberikan oleh prodi ini?
+    - Apakah ada kerjasama dengan universitas luar negeri?
+    - Berapa peringkat akreditasi prodi ini secara nasional?
+    - Apakah akreditasi prodi ini pernah mengalami peningkatan?
+    - Apa dampak akreditasi terhadap kualitas pendidikan di prodi ini?
+    - Apakah ada program sertifikasi bagi lulusan prodi ini?
+    - Bagaimana cara mengetahui status akreditasi prodi ini?
+    - Apakah akreditasi prodi ini berpengaruh dalam dunia kerja?
+    - Apakah lulusan dari prodi ini diakui oleh industri global?
+    - Apakah akreditasi prodi ini sudah diakui oleh kementerian pendidikan?
+    - Apakah ada penghargaan yang pernah diterima oleh dosen prodi ini?
+    - Bagaimana proses penilaian akreditasi untuk prodi ini?
+    - Apakah prodi ini memiliki afiliasi dengan lembaga pendidikan internasional?
+    - Apakah ada peringkat universitas yang menunjukkan kualitas prodi ini?
+    - Apakah ada publikasi ilmiah dari prodi ini yang diakui secara internasional?
+    - Apakah ada mahasiswa yang memenangkan lomba di bidang teknologi?
+    - Bagaimana cara mahasiswa berpartisipasi dalam kompetisi internasional?
+    - Apakah ada alumni yang meraih penghargaan dalam bidang akademik?
+    - Apakah universitas memiliki penghargaan dalam bidang penelitian?
+    - Bagaimana sistem evaluasi akreditasi dilakukan?
+    - Apakah ada dana hibah untuk proyek penelitian mahasiswa?
+    - Apakah ada alumni yang bekerja di perusahaan ternama dunia?
+    - Berapa tahun sekali akreditasi prodi ini diperbarui?
+    - Apakah prodi ini memiliki standar internasional seperti ISO?
+    - Apakah ada kerja sama dengan institusi riset global?
+    - Apakah ada mahasiswa yang pernah menjadi perwakilan dalam konferensi ilmiah?
+    - Apakah ada penghargaan akademik bagi mahasiswa berprestasi?
+    - Bagaimana cara melihat sertifikat akreditasi prodi ini?
+    - Apakah ada peluang bagi mahasiswa untuk mengikuti pertukaran pelajar?
+    - Apakah ada proyek riset mahasiswa yang pernah memenangkan penghargaan?
+    - Apakah ada kemitraan dengan industri besar dalam bidang akademik?
+    - Apakah ada jurnal ilmiah yang diterbitkan oleh prodi ini?
+    - Bagaimana cara mendapatkan beasiswa berdasarkan prestasi akademik?
+    - Apakah ada penghargaan khusus untuk dosen terbaik di prodi ini?
+    - Bagaimana pengaruh akreditasi terhadap kualitas lulusan prodi ini?
+    - Apakah akreditasi prodi ini memenuhi standar ASEAN University Network?
+    - Apakah ada mahasiswa yang pernah magang di perusahaan teknologi besar?
+    - Bagaimana cara prodi ini mempertahankan kualitas akreditasinya?
+    - Apakah prodi ini pernah mendapatkan hibah riset dari pemerintah?
+    - Apakah ada alumni yang menjadi dosen di universitas ternama?
+    - Apakah ada kompetisi internal untuk meningkatkan kualitas akademik mahasiswa?
+    - Bagaimana peran prodi ini dalam inovasi teknologi di kampus?
+    - Apakah ada laboratorium riset yang mendapat pengakuan internasional?
+    - Apakah ada penghargaan untuk mahasiswa dengan IPK tertinggi?
+
+- intent: kegiatan_mahasiswa
+  examples: |
+    - Apa saja kegiatan mahasiswa di prodi ini?
+    - Organisasi apa yang ada di prodi komputer jaringan?
+    - Apakah ada komunitas yang fokus pada pengembangan jaringan?
+    - Apakah ada event atau seminar yang bisa diikuti mahasiswa?
+    - Bagaimana cara bergabung dengan organisasi mahasiswa?
+    - Apakah ada program pertukaran mahasiswa?
+    - Apakah ada kompetisi yang rutin diikuti oleh mahasiswa?
+    - Apakah ada kegiatan ekstrakurikuler yang bisa diikuti mahasiswa?
+    - Bagaimana cara menjadi anggota himpunan mahasiswa?
+    - Apakah ada program mentoring untuk mahasiswa baru?
+    - Apakah ada konferensi atau workshop yang direkomendasikan untuk mahasiswa?
+    - Apakah ada lomba pemrograman yang sering diikuti mahasiswa?
+    - Apakah ada komunitas yang fokus pada keamanan siber?
+    - Apakah ada kegiatan pengabdian masyarakat yang bisa diikuti mahasiswa?
+    - Bagaimana cara mahasiswa mendapatkan sponsor untuk kompetisi?
+    - Apakah ada kelompok riset yang bisa diikuti mahasiswa?
+    - Apakah ada program magang yang diselenggarakan oleh universitas?
+    - Apakah ada kegiatan hackathon di kampus?
+    - Apakah ada kegiatan olahraga yang dikhususkan untuk mahasiswa prodi ini?
+    - Apakah mahasiswa bisa membuat organisasi atau komunitas sendiri?
+    - Apakah ada kegiatan untuk mengembangkan keterampilan kepemimpinan?
+    - Apakah ada seminar teknologi yang diadakan setiap semester?
+    - Apakah ada kegiatan startup atau inkubasi bisnis bagi mahasiswa?
+    - Bagaimana cara mengajukan proposal kegiatan mahasiswa?
+    - Apakah ada pelatihan atau bootcamp yang diadakan oleh universitas?
+    - Apakah ada kerja sama dengan industri untuk pelatihan mahasiswa?
+    - Bagaimana cara mengikuti program pertukaran pelajar?
+    - Apakah ada kesempatan bagi mahasiswa untuk menjadi asisten dosen?
+    - Apakah ada komunitas open source di kampus?
+    - Apakah ada pelatihan khusus untuk sertifikasi profesional?
+    - Apakah ada festival atau acara tahunan yang diselenggarakan oleh mahasiswa?
+    - Apakah ada grup studi untuk mahasiswa yang ingin belajar bersama?
+    - Apakah ada kesempatan untuk mahasiswa menjadi pembicara dalam seminar?
+    - Bagaimana cara mendapatkan informasi terbaru tentang kegiatan mahasiswa?
+    - Apakah ada dana hibah untuk proyek mahasiswa?
+    - Apakah ada kegiatan sosial yang melibatkan mahasiswa?
+    - Apakah ada program kerja sama dengan universitas luar negeri?
+    - Apakah ada kesempatan untuk mahasiswa melakukan penelitian mandiri?
+    - Apakah ada organisasi mahasiswa yang fokus pada kewirausahaan?
+    - Apakah ada klub robotika di kampus?
+    - Apakah ada komunitas mahasiswa yang membahas artificial intelligence?
+    - Bagaimana cara menjadi panitia dalam acara kampus?
+    - Apakah ada pelatihan kepemimpinan untuk mahasiswa?
+    - Apakah ada program kompetisi bisnis digital di kampus?
+    - Bagaimana cara mengikuti perlombaan tingkat nasional atau internasional?
+    - Apakah ada komunitas mahasiswa yang membahas blockchain dan fintech?
+    - Apakah ada kesempatan bagi mahasiswa untuk mendapatkan pendanaan startup?
+    - Apakah ada acara networking dengan alumni dan profesional industri?
+    - Apakah ada workshop atau kursus tambahan untuk mahasiswa?
+
+- intent: kontak_lokasi
+  examples: |
+    - Bagaimana saya bisa menghubungi prodi ini?
+    - Di mana lokasi prodi komputer jaringan?
+    - Apakah ada kontak WhatsApp atau email yang bisa saya hubungi?
+    - Bisakah saya mengunjungi kampus sebelum mendaftar?
+    - Apakah ada akun media sosial resmi untuk mendapatkan update terbaru?
+    - Dimana saya bisa menemukan alamat lengkap kampus?
+    - Bagaimana cara menjadwalkan kunjungan kampus?
+    - Apakah ada nomor telepon yang bisa saya hubungi?
+    - Apakah ada layanan informasi online untuk pendaftaran?
+    - Apakah ada jam operasional khusus untuk layanan informasi?
+    - Apakah ada kontak resmi untuk mahasiswa baru?
+    - Bagaimana cara mendapatkan informasi tentang prodi melalui telepon?
+    - Apakah ada peta lokasi kampus yang bisa saya akses?
+    - Apakah ada grup diskusi atau forum online untuk calon mahasiswa?
+    - Dimana saya bisa mendapatkan brosur atau booklet informasi kampus?
+    - Apakah ada chatbot resmi untuk menjawab pertanyaan terkait prodi ini?
+    - Bagaimana cara berbicara langsung dengan staf akademik?
+    - Apakah ada kantor informasi mahasiswa baru di kampus?
+    - Apakah ada kantor perwakilan kampus di kota lain?
+    - Bagaimana cara mengakses portal informasi kampus?
+    - Apakah ada alamat email khusus untuk pertanyaan tentang program studi?
+    - Apakah ada sesi konsultasi tatap muka untuk calon mahasiswa?
+    - Apakah ada jadwal terbuka untuk kunjungan kampus?
+    - Apakah ada layanan live chat untuk bertanya seputar prodi ini?
+    - Bagaimana cara mendapatkan informasi terbaru tentang kampus?
+    - Apakah ada nomor telepon darurat kampus?
+    - Bagaimana cara mengajukan pertanyaan jika saya tidak bisa datang ke kampus?
+    - Apakah ada alamat media sosial yang aktif memberikan informasi terbaru?
+    - Dimana saya bisa menemukan informasi kampus di Google Maps?
+    - Apakah ada layanan informasi di luar jam kerja?
+    - Bagaimana cara menghubungi dosen atau staf akademik?
+    - Apakah ada tempat parkir khusus untuk tamu kampus?
+    - Bagaimana cara menemukan gedung prodi komputer jaringan di kampus?
+    - Apakah ada kantor pusat layanan akademik di dalam kampus?
+    - Apakah tersedia brosur dalam format digital?
+    - Apakah saya bisa meminta panduan kampus sebelum berkunjung?
+    - Apakah ada informasi transportasi umum menuju kampus?
+    - Apakah ada pemandu kampus bagi calon mahasiswa yang ingin berkunjung?
+    - Apakah ada layanan informasi dalam bahasa Inggris?
+    - Bagaimana cara mengatur pertemuan dengan akademik advisor?
+    - Apakah ada kontak khusus untuk mahasiswa internasional?
+    - Apakah ada kantor layanan administrasi mahasiswa?
+    - Apakah ada peta kampus yang bisa diunduh?
+    - Bagaimana cara menghubungi pusat layanan mahasiswa?
+    - Apakah ada jalur komunikasi resmi untuk bertanya tentang perkuliahan?
+    - Apakah ada layanan informasi untuk mahasiswa berkebutuhan khusus?
+    - Apakah tersedia informasi lokasi kampus di website resmi?
+    - Bagaimana cara mendapatkan kontak alumni untuk bertanya pengalaman mereka?
+    - Apakah saya bisa mendapatkan tur kampus sebelum memutuskan mendaftar?
+  
+- intent: beasiswa_dan_bantuan_keuangan
+  examples: |
+    - Apakah ada beasiswa untuk mahasiswa baru?
+    - Bagaimana cara mengajukan beasiswa?
+    - Apa saja jenis beasiswa yang tersedia?
+    - Apakah ada beasiswa khusus untuk mahasiswa berprestasi?
+    - Bagaimana proses seleksi penerima beasiswa?
+    - Apakah ada bantuan keuangan bagi mahasiswa kurang mampu?
+    - Berapa besar dana yang diberikan dalam beasiswa?
+    - Apakah ada beasiswa untuk mahasiswa dari daerah tertentu?
+    - Bagaimana cara mengetahui apakah saya memenuhi syarat untuk beasiswa?
+    - Apakah ada beasiswa yang diberikan oleh pihak swasta?
+    - Apakah ada batasan IPK untuk mendapatkan beasiswa?
+    - Apakah ada beasiswa untuk mahasiswa yang aktif di organisasi?
+    - Apakah beasiswa mencakup biaya hidup atau hanya biaya kuliah?
+    - Berapa lama durasi beasiswa yang diberikan?
+    - Apakah mahasiswa bisa mengajukan lebih dari satu beasiswa?
+    - Apakah ada program cicilan bagi mahasiswa yang tidak mendapat beasiswa?
+    - Kapan periode pendaftaran beasiswa dibuka?
+    - Bagaimana jika saya kehilangan beasiswa di tengah semester?
+    - Apakah ada beasiswa khusus untuk mahasiswa difabel?
+    - Apakah ada syarat pengembalian dana jika saya tidak menyelesaikan kuliah?
+    - Apakah ada bantuan biaya transportasi bagi mahasiswa kurang mampu?
+    - Bagaimana cara mendapatkan beasiswa dari universitas ini?
+    - Apakah ada beasiswa untuk mahasiswa yang memiliki prestasi olahraga?
+    - Apakah ada program kerja paruh waktu untuk membantu biaya kuliah?
+    - Apakah ada beasiswa bagi mahasiswa yang berasal dari keluarga TNI/PNS?
+    - Bagaimana cara memperpanjang beasiswa di tahun berikutnya?
+    - Apakah ada beasiswa bagi mahasiswa asing?
+    - Apakah ada beasiswa yang diberikan berdasarkan kebutuhan finansial?
+    - Apakah ada bantuan laptop atau perangkat belajar bagi penerima beasiswa?
+    - Apakah mahasiswa harus mengembalikan beasiswa jika mendapatkan nilai buruk?
+    - Apakah ada program bantuan makanan bagi mahasiswa yang membutuhkan?
+    - Bagaimana cara mengetahui daftar beasiswa terbaru?
+    - Apakah ada beasiswa khusus untuk mahasiswa perempuan?
+    - Apakah ada program bantuan uang saku bagi mahasiswa penerima beasiswa?
+    - Bagaimana cara mendapatkan surat rekomendasi untuk beasiswa?
+    - Apakah ada batasan usia untuk mengajukan beasiswa?
+    - Apakah ada beasiswa untuk mahasiswa yang ingin mengikuti pertukaran pelajar?
+    - Apakah beasiswa dapat digabung dengan bantuan keuangan lain?
+    - Apakah mahasiswa bisa kehilangan beasiswa jika melanggar aturan akademik?
+    - Bagaimana cara mengetahui apakah saya lolos seleksi beasiswa?
+    - Apakah ada beasiswa yang diberikan oleh alumni universitas?
+    - Apakah ada program subsidi UKT bagi mahasiswa?
+    - Bagaimana cara mengetahui daftar sponsor beasiswa di universitas ini?
+    - Apakah ada beasiswa bagi mahasiswa yang ingin melakukan penelitian?
+    - Bagaimana sistem pencairan dana bagi penerima beasiswa?
+    - Apakah ada perbedaan syarat antara beasiswa pemerintah dan beasiswa swasta?
+    - Apakah ada program bantuan keuangan darurat bagi mahasiswa?
+    - Apakah saya bisa mengajukan beasiswa jika baru masuk di semester kedua?
+    - Bagaimana cara mengajukan keringanan UKT bagi mahasiswa kurang mampu?
+
+- intent: jadwal_kuliah
+  examples: |
+    - Kapan jadwal kuliah dimulai?
+    - Apakah kuliah hari ini ada?
+    - Bagaimana jadwal kuliah semester ini?
+    - Apakah ada perubahan jadwal kuliah minggu depan?
+    - Bisa berikan saya jadwal kuliah lengkap?
+    - Jam berapa kuliah saya dimulai besok?
+    - Dimana saya bisa melihat jadwal kuliah terbaru?
+    - Jadwal kuliah hari Senin bagaimana?
+    - Apakah ada kuliah di hari Sabtu?
+    - Apakah jadwal kuliah bisa berubah setiap semester?
+    - Bagaimana cara mengecek jadwal kuliah saya?
+    - Mata kuliah apa saja yang saya ambil semester ini?
+    - Jam berapa kelas pemrograman dimulai?
+    - Apakah kuliah online atau offline?
+    - Bagaimana jika ada bentrok jadwal kuliah?
+    - Apakah ada waktu istirahat di antara jam kuliah?
+    - Apakah ada kelas tambahan di luar jadwal?
+    - Bagaimana cara mengetahui ruangan kuliah saya?
+    - Apa yang harus saya lakukan jika dosen mengganti jadwal?
+    - Bagaimana cara mengetahui perubahan jadwal mendadak?
+    - Apakah ada aplikasi untuk melihat jadwal kuliah?
+    - Apakah ada jadwal kuliah malam?
+    - Bagaimana jika saya ketinggalan jadwal kuliah?
+    - Kapan libur kuliah semester ini?
+    - Bagaimana jadwal ujian semester?
+    - Jam berapa kelas algoritma dimulai?
+    - Apakah ada kelas praktikum untuk mata kuliah jaringan?
+    - Dimana saya bisa melihat daftar kelas kuliah?
+    - Bagaimana cara mengetahui jadwal dosen pengajar?
+    - Jadwal kuliah semester depan sudah keluar?
+    - Apakah ada perbedaan jadwal antara mahasiswa reguler dan kelas karyawan?
+    - Bagaimana cara mengubah jadwal kuliah?
+    - Apa yang terjadi jika saya tidak masuk kuliah sesuai jadwal?
+    - Bagaimana cara mengetahui kelas mana yang kosong?
+    - Apakah saya bisa mengikuti kelas di luar jadwal saya?
+    - Apakah ada jam kuliah yang bisa saya pilih sendiri?
+    - Dimana saya bisa mendapatkan jadwal kuliah PDF?
+    - Apakah ada kalender akademik untuk melihat jadwal kuliah?
+    - Apakah ada kuliah pengganti jika saya tidak hadir?
+    - Bagaimana cara mengetahui jadwal dosen bimbingan skripsi?
+    - Bagaimana cara mengetahui jika ada perubahan kelas?
+    - Apakah ada jadwal kuliah hybrid (online dan offline)?
+    - Bagaimana jadwal perkuliahan di hari libur nasional?
+    - Apakah ada kelas khusus bagi mahasiswa yang bekerja?
+    - Dimana saya bisa melihat jadwal kuliah saya di sistem akademik?
+    - Apakah ada jadwal khusus untuk mahasiswa tingkat akhir?
+    - Bagaimana cara mendapatkan jadwal konsultasi dengan dosen?
+    - Apakah ada jadwal konsultasi tugas akhir?
+    - Jam berapa kelas teori basis data dimulai?
+
+- intent: greet
+  examples: |
+    - Hai
+    - Halo
+    - Selamat pagi
+    - Selamat siang
+    - Selamat malam
+    - Apa kabar?
+    - Hai, bot!
+    - Hey
+    - Helo
+    - Yo, apa kabar?
+    - Apa kabar hari ini?
+    - Halo, bagaimana harimu?
+    - Senang bertemu denganmu!
+    - Apa yang bisa kamu lakukan?
+    - Hello there!
+
+- intent: chit_chat
+  examples: |
+    - Apa kabar?
+    - Lagi ngapain?
+    - Kamu bisa apa saja?
+    - Ceritakan lelucon
+    - Kamu suka musik?
+    - Siapa yang membuatmu?
+    - Kamu punya teman?
+    - Kamu makan apa hari ini?
+    - Kamu bisa bicara bahasa lain?
+    - Bagaimana perasaanmu hari ini?
+    - Apa film favoritmu?
+    - Kamu suka bermain game?
+    - Ada berita menarik hari ini?
+    - Siapa artis favoritmu?
+    - Kamu bisa nyanyi?
+    - Apakah kamu punya hobi?
+    - Bagaimana cuaca hari ini?
+    - Kamu suka olahraga?
+    - Apa warna favoritmu?
+    - Apakah kamu punya saudara?
+
+- intent: informasi_general
+  examples: |
+    - Bisa carikan informasi tentang teknologi terbaru?
+    - Apa itu kecerdasan buatan?
+    - Jelaskan tentang IoT
+    - Bagaimana cara kerja jaringan 5G?
+    - Siapa penemu internet?
+    - Apa saja bahasa pemrograman yang populer?
+    - Berita terbaru tentang AI?
+    - Bagaimana cara kerja blockchain?
+    - Apa itu komputasi awan?
+    - Jelaskan tentang keamanan siber
+    - Bagaimana cara kerja machine learning?
+    - Siapa ilmuwan komputer terkenal?
+    - Apa tren terbaru di dunia teknologi?
+    - Apa itu quantum computing?
+    - Bagaimana cara kerja enkripsi data?
+    - Siapa CEO Google sekarang?
+    - Apa itu metaverse?
+    - Bagaimana cara kerja robot?
+    - Apa saja fitur terbaru di iPhone?
+    - Siapa pemilik Tesla?

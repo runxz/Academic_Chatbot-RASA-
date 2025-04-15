@@ -1,0 +1,92 @@
+version: "3.1"
+
+rules:
+- rule: Balasan dengan informasi dari database
+  steps:
+  - intent: informasi_pendaftaran
+  - action: action_get_informasi
+
+- rule: Balasan untuk jadwal pendaftaran
+  steps:
+  - intent: jadwal_pendaftaran
+  - action: action_get_informasi
+
+- rule: Balasan untuk biaya kuliah
+  steps:
+  - intent: biaya_kuliah
+  - action: action_get_informasi
+
+- rule: Balasan untuk persyaratan pendaftaran
+  steps:
+  - intent: persyaratan_pendaftaran
+  - action: action_get_informasi
+
+- rule: Balasan untuk prosedur seleksi
+  steps:
+  - intent: prosedur_seleksi
+  - action: action_get_informasi
+
+- rule: Balasan untuk informasi prodi
+  steps:
+  - intent: informasi_prodi
+  - action: action_get_informasi
+
+- rule: Balasan untuk kurikulum dan mata kuliah
+  steps:
+  - intent: kurikulum_mata_kuliah
+  - action: action_get_informasi
+
+- rule: Balasan untuk fasilitas dan laboratorium
+  steps:
+  - intent: fasilitas_laboratorium
+  - action: action_get_informasi
+
+- rule: Balasan untuk peluang kerja
+  steps:
+  - intent: peluang_kerja
+  - action: action_get_informasi
+
+- rule: Balasan untuk akreditasi dan prestasi
+  steps:
+  - intent: akreditasi_prestasi
+  - action: action_get_informasi
+
+- rule: Balasan untuk kegiatan mahasiswa
+  steps:
+  - intent: kegiatan_mahasiswa
+  - action: action_get_informasi
+
+- rule: Balasan untuk kontak dan lokasi
+  steps:
+  - intent: kontak_lokasi
+  - action: action_get_informasi
+
+- rule: Balasan untuk beasiswa dan bantuan keuangan
+  steps:
+  - intent: beasiswa_dan_bantuan_keuangan
+  - action: action_get_informasi
+
+- rule: Balasan untuk jadwal kuliah
+  steps:
+  - intent: jadwal_kuliah
+  - action: action_get_informasi
+
+- rule: Menjawab salam
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Menangani chit-chat
+  steps:
+  - intent: chit_chat
+  - action: utter_chit_chat
+
+- rule: Menangani fallback
+  steps:
+  - intent: fallback
+  - action: utter_fallback
+
+- rule: Cari informasi di internet jika intent tidak ditemukan
+  steps:
+  - intent: informasi_general
+  - action: action_search_internet
