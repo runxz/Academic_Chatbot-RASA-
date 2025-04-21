@@ -16,6 +16,10 @@ action_endpoint:
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa/tracker-stores
+tracker_store:
+  type: SQL
+  dialect: "mysql+pymysql"
+  url: "mysql+pymysql://root:@localhost:3306/rasa"
 
 #tracker_store:
 #    type: redis

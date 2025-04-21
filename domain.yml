@@ -49,3 +49,8 @@ responses:
   utter_informasi_general:
     - text: "Saya akan mencari informasi untuk Anda, mohon tunggu sebentar..."
 
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
