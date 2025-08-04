@@ -70,6 +70,11 @@ stories:
   steps:
   - intent: beasiswa_dan_bantuan_keuangan
   - action: action_get_informasi
+  
+- story: Cari file
+  steps:
+  - intent: cari_file
+  - action: action_cari_file
 
 - story: Menjawab salam
   steps:

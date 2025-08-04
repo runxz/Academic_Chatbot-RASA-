@@ -1,0 +1,35 @@
+📁 chatbotv1/
+├── 📁 .rasa/                        # Metadata model internal Rasa
+├── 📁 actions/                     # Folder aksi kustom (custom actions)
+│   ├── __init__.py
+│   └── actions.py
+├── 📁 app/                         # Backend Flask dan skrip pembantu
+│   ├── 📁 static/                  # File statis (jika diperlukan)
+│   ├── 📁 templates/              # Template HTML Flask
+│   ├── 📁 uploads/                # Folder penyimpanan file yang diunggah
+│   ├── app.py                     # Endpoint utama Flask
+│   ├── generate_nlu_auto.py       # Skrip auto-generasi intent (opsional)
+│   ├── generate_nlu_fallback.py   # Skrip fallback intent
+│   ├── generate_stories_auto.py   # Generator otomatis alur dialog
+│   └── train_and_reload.py        # Skrip pelatihan dan reload model
+├── 📁 data/                        # Dataset untuk pelatihan NLU & dialog
+│   ├── nlu.yml
+│   ├── nlu_auto.yml
+│   ├── nlu_fallback.yml
+│   ├── rules.yml
+│   ├── stories.yml
+│   ├── stories_auto.yml
+├── 📁 models/                      # Folder penyimpanan model hasil training
+├── 📁 static/                      # File statis untuk frontend web (CSS, JS)
+├── 📁 tests/                       # Pengujian sistem (unit test)
+├── 📁 venv/                        # Virtual environment Python
+├── config.yml                     # Pipeline NLP: tokenizer, featurizer, classifier
+├── credentials.yml                # Autentikasi channel (REST, Telegram, dll)
+├── domain.yml                     # Intent, entitas, aksi, dan respons chatbot
+├── endpoints.yml                  # Konfigurasi server action dan tracker
+├── index.html                     # Halaman antarmuka pengguna
+├── rasa_server.log                # Log interaksi dan error dari Rasa
+├── requirements.txt               # Daftar pustaka Python yang dibutuhkan
+├── scripts.js                     # Logika client-side antarmuka web
+├── styles.css                     # Desain tampilan web chatbot
+

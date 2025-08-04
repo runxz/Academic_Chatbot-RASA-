@@ -84,9 +84,15 @@ rules:
 - rule: Menangani fallback
   steps:
   - intent: fallback
-  - action: utter_fallback
+  - action: action_gemini_fallback
 
 - rule: Cari informasi di internet jika intent tidak ditemukan
   steps:
   - intent: informasi_general
   - action: action_search_internet
+
+- rule: Cari file berdasarkan pertanyaan pengguna
+  steps:
+  - intent: cari_file
+  - action: action_cari_file
+

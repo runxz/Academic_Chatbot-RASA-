@@ -117,3 +117,60 @@ class ActionSearchWikipedia(Action):
             print(f"Error: {e}")
 
         return []
+
+class ActionCariFile(Action):
+    def name(self):
+        return "action_cari_file"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain):
+        # Ambil entitas
+        tahun = next(tracker.get_latest_entity_values("tahun"), None)
+        nama_file = next(tracker.get_latest_entity_values("nama_file"), None)
+
+        # Query builder
+        params = {}
+        query = "SELECT * FROM files WHERE 1=1"
+        if nama_file:
+            query += " AND (nama LIKE %(nama)s OR deskripsi LIKE %(nama)s)"
+            params["nama"] = f"%{nama_file}%"
+        if tahun:
+            query += " AND tahun = %(tahun)s"
+            params["tahun"] = tahun
+
+        # Koneksi ke Flask API
+        try:
+            response = requests.get(f"{FLASK_API_URL}/files/search", params={"query": nama_file or ""})
+            data = response.json()
+
+            # Filter manual jika tahun digunakan
+            if tahun:
+                data = [row for row in data if str(row["tahun"]) == str(tahun)]
+
+            if data:
+                messages = [f"- {f['nama']} ({f['tahun']}): {f['link']}" for f in data[:5]]
+                dispatcher.utter_message(text="Berikut file yang saya temukan:\n" + "\n".join(messages))
+            else:
+                dispatcher.utter_message(text="Maaf, tidak ada file yang cocok ditemukan.")
+        except Exception as e:
+            dispatcher.utter_message(text="Terjadi kesalahan saat mencari file.")
+            print(f"Error: {e}")
+        return []
+
+class ActionGeminiFallback(Action):
+    def name(self):
+        return "action_gemini_fallback"
+
+    def run(self, dispatcher, tracker, domain):
+        user_message = tracker.latest_message.get("text")
+
+        try:
+            response = requests.post("http://localhost:5000/fallback_gemini", json={"message": user_message})
+            if response.status_code == 200:
+                gemini_reply = response.json().get("response", "")
+                dispatcher.utter_message(text=gemini_reply)
+            else:
+                dispatcher.utter_message(text="Maaf, sistem AI tidak merespons.")
+        except Exception as e:
+            dispatcher.utter_message(text=f"Terjadi kesalahan fallback: {str(e)}")
+
+        return []

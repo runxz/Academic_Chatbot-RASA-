@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Admin</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f2f2f2; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+        h2 { border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        form { margin-bottom: 30px; }
+        input, textarea, select {
+            width: 100%; padding: 8px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px;
+        }
+        button {
+            background-color: #28a745; color: white; padding: 10px 16px;
+            border: none; border-radius: 4px; cursor: pointer;
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 8px 12px; border: 1px solid #ccc; text-align: left; }
+        .delete-btn {
+            background-color: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Upload File</h2>
+    <form method="POST" action="/admin/upload_file" enctype="multipart/form-data">
+        <input type="text" name="nama" placeholder="Nama Dokumen" required>
+        <input type="text" name="tahun" placeholder="Tahun" required>
+        <textarea name="deskripsi" placeholder="Deskripsi" required></textarea>
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <h2>Tambah Intent Baru</h2>
+    <form method="POST" action="/admin/intent">
+        <input type="text" name="intent" placeholder="Nama Intent" required>
+        <textarea name="examples" placeholder="Contoh (1 baris tiap contoh)" rows="5" required></textarea>
+        <button type="submit">Tambah Intent</button>
+    </form>
+
+    <h2>Daftar File</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Tahun</th>
+                <th>Deskripsi</th>
+                <th>Link</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for f in files %}
+            <tr>
+                <td>{{ f[1] }}</td>
+                <td>{{ f[2] }}</td>
+                <td>{{ f[3] }}</td>
+                <td><a href="{{ f[4] }}" target="_blank">Lihat</a></td>
+                <td>
+                    <form method="POST" action="/admin/delete_file/{{ f[0] }}">
+                        <button type="submit" class="delete-btn">Hapus</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -22,10 +22,14 @@ intents:
   - goodbye
   - thankyou
   - informasi_general  
+  - cari_file
+  - nlu_fallback
 
 actions:
   - action_get_informasi
   - action_search_internet
+  - action_cari_file
+  - action_gemini_fallback
 
 responses:
   utter_greet:
@@ -48,6 +52,8 @@ responses:
   
   utter_informasi_general:
     - text: "Saya akan mencari informasi untuk Anda, mohon tunggu sebentar..."
+
+    
 
 
 session_config:
