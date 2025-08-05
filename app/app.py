@@ -31,10 +31,10 @@ MODEL_DIR = Path("models")
 LOG_FILE = "rasa_server.log"
 
 # DB connections
-rasa_db = pymysql.connect(host="localhost", user="root", password="", database="rasa", charset="utf8mb4", cursorclass=pymysql.cursors.DictCursor)
+rasa_db = pymysql.connect(host="localhost", user="root", password="admin123", database="rasa", charset="utf8mb4", cursorclass=pymysql.cursors.DictCursor)
 rasa_cursor = rasa_db.cursor()
 
-chatbot_db = mysql.connector.connect(host="localhost", user="root", password="", database="chatbot_db")
+chatbot_db = mysql.connector.connect(host="localhost", user="root", password="admin123", database="chatbot_db")
 cursor = chatbot_db.cursor()
 
 def connect_db():
