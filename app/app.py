@@ -38,7 +38,12 @@ chatbot_db = mysql.connector.connect(host="localhost", user="root", password="ad
 cursor = chatbot_db.cursor()
 
 def connect_db():
-    return chatbot_db
+    return mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="admin123",
+        database="chatbot_db"
+    )
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
