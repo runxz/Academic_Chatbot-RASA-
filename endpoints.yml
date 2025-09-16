@@ -19,7 +19,7 @@ action_endpoint:
 tracker_store:
   type: SQL
   dialect: "mysql+pymysql"
-  url: "mysql+pymysql://root:@localhost:3306/rasa"
+  url: "mysql+pymysql://root:admin123@localhost:3306/rasa"
 
 #tracker_store:
 #    type: redis
