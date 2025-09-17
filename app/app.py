@@ -191,7 +191,7 @@ def monitor():
 
 @app.route("/monitor/train", methods=["POST"])
 def train_rasa():
-    subprocess.Popen(["python", "app/train_and_reload.py"])
+    subprocess.Popen(["app/train_and_reload.py"])
     return redirect(url_for("monitor"))
 
 @app.route('/kategori_intent', methods=['GET'])
