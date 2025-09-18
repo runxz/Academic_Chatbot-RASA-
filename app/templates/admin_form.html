@@ -5,8 +5,8 @@
     <title>Panel Admin</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; background: #f2f2f2; }
-        .container { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
-        h2 { border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        .container { max-width: 1000px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+        h2 { border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-top: 30px; }
         form { margin-bottom: 30px; }
         input, textarea, select {
             width: 100%; padding: 8px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px;
@@ -17,9 +17,8 @@
         }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { padding: 8px 12px; border: 1px solid #ccc; text-align: left; }
-        .delete-btn {
-            background-color: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 4px;
-        }
+        .delete-btn { background-color: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 4px; }
+        .edit-btn { background-color: #ffc107; color: white; border: none; padding: 5px 10px; border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -39,6 +38,48 @@
         <textarea name="examples" placeholder="Contoh (1 baris tiap contoh)" rows="5" required></textarea>
         <button type="submit">Tambah Intent</button>
     </form>
+
+    <h2>Kelola Informasi</h2>
+    <form method="POST" action="/informasi">
+        <select name="kategori_id" required>
+            <option value="">-- Pilih Intent/Kategori --</option>
+            {% for k in kategori %}
+                <option value="{{ k['id'] }}">{{ k['nama_intent'] }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="judul" placeholder="Judul Informasi" required>
+        <textarea name="deskripsi" placeholder="Deskripsi Informasi" rows="4" required></textarea>
+        <button type="submit">Tambah Informasi</button>
+    </form>
+
+    <h2>Daftar Informasi</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Kategori</th>
+                <th>Judul</th>
+                <th>Deskripsi</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for info in informasi %}
+            <tr>
+                <td>{{ info['kategori_id'] }}</td>
+                <td>{{ info['judul'] }}</td>
+                <td>{{ info['deskripsi'] }}</td>
+                <td>
+                    <form method="POST" action="/informasi/{{ info['id'] }}?_method=DELETE" style="display:inline-block;">
+                        <button type="submit" class="delete-btn">Hapus</button>
+                    </form>
+                    <form method="GET" action="/informasi/{{ info['id'] }}/edit" style="display:inline-block;">
+                        <button type="submit" class="edit-btn">Edit</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
     <h2>Daftar File</h2>
     <table>
