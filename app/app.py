@@ -100,7 +100,43 @@ def admin_panel():
         files = cur.fetchall()
         cur.execute("SELECT * FROM kategori_intent ORDER BY id DESC")
         kategori = cur.fetchall()
-    return render_template("admin_form.html", files=files, kategori=kategori)
+        cur.execute("SELECT i.id, i.kategori_id, k.nama_intent, i.judul, i.deskripsi FROM informasi i JOIN kategori_intent k ON i.kategori_id = k.id ORDER BY i.id DESC")
+        informasi = cur.fetchall()
+    return render_template("admin_form.html", files=files, kategori=kategori, informasi=informasi)
+
+@app.route("/admin/informasi", methods=["POST"])
+def admin_add_informasi():
+    kategori_id = request.form["kategori_id"]
+    judul = request.form["judul"]
+    deskripsi = request.form["deskripsi"]
+
+    conn = connect_db()
+    with conn.cursor() as cur:
+        cur.execute("INSERT INTO informasi (kategori_id, judul, deskripsi) VALUES (%s, %s, %s)",
+                    (kategori_id, judul, deskripsi))
+    conn.commit()
+    return redirect("/admin")
+
+@app.route("/admin/informasi/delete/<int:id>", methods=["POST"])
+def admin_delete_informasi(id):
+    conn = connect_db()
+    with conn.cursor() as cur:
+        cur.execute("DELETE FROM informasi WHERE id = %s", (id,))
+    conn.commit()
+    return redirect("/admin")
+
+@app.route("/admin/informasi/edit/<int:id>", methods=["POST"])
+def admin_edit_informasi(id):
+    judul = request.form["judul"]
+    deskripsi = request.form["deskripsi"]
+    kategori_id = request.form["kategori_id"]
+
+    conn = connect_db()
+    with conn.cursor() as cur:
+        cur.execute("UPDATE informasi SET kategori_id=%s, judul=%s, deskripsi=%s WHERE id=%s",
+                    (kategori_id, judul, deskripsi, id))
+    conn.commit()
+    return redirect("/admin")
 
 @app.route("/admin/upload_file", methods=["POST"])
 def upload_file():
