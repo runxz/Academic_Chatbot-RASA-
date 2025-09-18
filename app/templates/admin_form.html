@@ -106,7 +106,7 @@
                     <form method="POST" action="/admin/informasi/edit/{{ i.id }}" style="margin-top:5px;">
                         <select name="kategori_id" required>
                             {% for k in kategori %}
-                                <option value="{{ k.id }}" {% if k.id == i.kategori_id %}selected{% endif %}>{{ k.nama_intent }}</option>
+                                <option value="{{ k.id }}" {% if k.id == i.kategori_id %}selected{% endif %}>{{ k.nama_kategori }}</option>
                             {% endfor %}
                         </select>
                         <input type="text" name="judul" value="{{ i.judul }}" required>
