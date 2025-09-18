@@ -44,7 +44,7 @@
         <select name="kategori_id" required>
             <option value="">-- Pilih Kategori Intent --</option>
             {% for k in kategori %}
-                <option value="{{ k.id }}">{{ k.nama_intent }}</option>
+                <option value="{{ k.id }}">{{ k.nama_kategori }}</option>
             {% endfor %}
         </select>
         <input type="text" name="judul" placeholder="Judul Informasi" required>
