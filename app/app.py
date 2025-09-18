@@ -100,7 +100,7 @@ def admin_panel():
         files = cur.fetchall()
         cur.execute("SELECT * FROM kategori_intent ORDER BY id DESC")
         kategori = cur.fetchall()
-        cur.execute("SELECT i.id, i.kategori_id, k.nama_intent, i.judul, i.deskripsi FROM informasi i JOIN kategori_intent k ON i.kategori_id = k.id ORDER BY i.id DESC")
+        cur.execute("SELECT i.id, i.kategori_id, k.nama_kategori, i.judul, i.deskripsi FROM informasi i JOIN kategori_intent k ON i.kategori_id = k.id ORDER BY i.id DESC")
         informasi = cur.fetchall()
     return render_template("admin_form.html", files=files, kategori=kategori, informasi=informasi)
 
