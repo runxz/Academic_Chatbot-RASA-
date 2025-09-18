@@ -14,6 +14,8 @@ import google.generativeai as genai
 from werkzeug.utils import secure_filename
 from pathlib import Path
 from datetime import datetime
+import sys
+import subprocess
 
 UPLOAD_FOLDER = "static/uploads"
 ALLOWED_EXTENSIONS = {"pdf", "doc", "docx", "txt"}
@@ -191,7 +193,7 @@ def monitor():
 
 @app.route("/monitor/train", methods=["POST"])
 def train_rasa():
-    subprocess.Popen(["python", "app/train_and_reload.py"])
+    subprocess.Popen([sys.executable, "app/train_and_reload.py"])
     return redirect(url_for("monitor"))
 
 @app.route('/kategori_intent', methods=['GET'])
